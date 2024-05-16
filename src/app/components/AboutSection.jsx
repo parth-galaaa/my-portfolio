@@ -49,9 +49,8 @@ const TAB_DATA = [
                     ].map((icon, index) => (
                         <motion.div
                             key={icon.alt}
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 0 }}
                             animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -50 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
                             <Image src={icon.src} alt={icon.alt} />
@@ -92,7 +91,7 @@ const AboutSection = () => {
                 setInView(entry.isIntersecting);
             },
             {
-                threshold: 0.5 // Adjust as needed
+                threshold: 0.5
             }
         );
 
@@ -113,12 +112,20 @@ const AboutSection = () => {
 
     return (
         <section id="about" className="text-white" ref={aboutRef}>
-            <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 sl:gap-16 xl:px-16">
-                <Image src="/images/setup.jpg" alt="Setup" width={500} height={500} />
-                <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-                    <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-                    <p className="text-base lg:text-lg">Description</p>
-                    <div className="flex flex-row justify-start mt-8">
+            <h2 className="text-4xl lg:text-6xl font-bold text-white text-right">About Me</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 md:px-16 mb-8">
+                <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+                    <Image
+                        src="/images/dev.png"
+                        alt="dev"
+                        className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        width={350}
+                        height={350}
+                    />
+                </div>
+                <div className="text-left">
+                    <p className="text-lg mb-6">Hey there, I'm passionate about turning lines of code into meaningful solutions. From late-night debugging sessions to the thrill of seeing my projects come to life, I'm all about the journey.</p>
+                    <div className="flex flex-row justify-start space-x-4 mb-8">
                         {TAB_DATA.map((tabItem) => (
                             <TabButton key={tabItem.id} selectTab={() => handleTabChange(tabItem.id)} active={tab === tabItem.id}>
                                 {tabItem.title}
@@ -128,7 +135,22 @@ const AboutSection = () => {
                     <div className="mt-8">
                         {inView && (
                             <AnimatePresence>
-                                {TAB_DATA.find((t) => t.id === tab).content}
+                                <motion.div
+                                    key={tab}
+                                    initial={{ opacity: 0, y: 0 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                >
+                                    {tab === "education" ? TAB_DATA.find((t) => t.id === tab).content : (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 0 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 0.5 }}
+                                        >
+                                            {TAB_DATA.find((t) => t.id === tab).content}
+                                        </motion.div>
+                                    )}
+                                </motion.div>
                             </AnimatePresence>
                         )}
                     </div>

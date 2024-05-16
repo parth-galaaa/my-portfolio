@@ -48,27 +48,27 @@ const ExperienceSection = () => {
 
     return (
         <section id="experiences" className="text-white mt-2">
-            <h2 className="text-center text-4xl font-bold text-white mt-4 mb-4">
-                Work Experience
-            </h2>
-            {workExperiences.map((experience) => (
-                <div key={experience.id} className="rounded-b-xl bg-[#181818] p-4 mb-4">
-                    <div className="flex justify-between">
-                        <div>
-                            <h3 className="font-bold mb-1 flex items-center">
-                                <span className="text-2xl">{experience.companyName}</span>
-                            </h3>
-                            <p className="text-1xl">{experience.position}</p>
-                            <ul className="list-disc list-inside mt-2">
-                                {experience.duties.map((duty, index) => (
-                                    <li key={index} className="text-sm">{duty}</li>
-                                ))}
-                            </ul>
+            <h2 className="text-4xl lg:text-6xl font-bold text-white text-left mb-8 mt-4">Work Experience</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {workExperiences.map((experience) => (
+                    <div key={experience.id} className="rounded-lg overflow-hidden shadow-lg bg-gray-800 h-full">
+                        <div className="px-6 py-4 h-full flex flex-col justify-between">
+                            <div>
+                                <div className="font-bold text-xl mb-2">{experience.companyName}</div>
+                                <p className="text-gray-300 text-base mb-2">{experience.position}</p>
+                                <ul className="list-disc list-inside overflow-auto max-h-36">
+                                    {experience.duties.map((duty, index) => (
+                                        <li key={index} className="text-gray-400 text-sm mb-1">{duty}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="flex justify-between items-center mt-4">
+                                <span className="text-gray-400 text-base">{experience.duration}</span>
+                            </div>
                         </div>
-                        <span className="text-1xl">{experience.duration}</span>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </section>
     );
 };
