@@ -12,13 +12,17 @@ const navLinks = [
         path:"#about",
     },
     {
+        title:"Experiences",
+        path:"#experiences"
+    },
+    {
         title:"Projects",
         path:"#project",
     },
     {
         title:"Contact",
         path:"#contact",
-    },
+    }
 ];
 
 const Navbar = () => {
