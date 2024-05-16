@@ -1,7 +1,6 @@
 "use client";
-
-import React, {useTransition, useState} from 'react'
-import Image from 'next/image'
+import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import TabButton from './TabButton';
 import cIcon from "../../../public/c.svg";
 import javaIcon from "../../../public/java.svg";
@@ -20,7 +19,7 @@ import firebaseIcon from "../../../public/firebase.svg";
 import vercelIcon from "../../../public/vercel.svg";
 import mysqlIcon from "../../../public/mysql.svg";
 import postmanlIcon from "../../../public/postman.svg";
-import ExperienceSection from './ExperienceSection';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const TAB_DATA = [
     {
@@ -28,23 +27,37 @@ const TAB_DATA = [
         id: "skills",
         content: (
             <div className="socials flex flex-row flex-wrap gap-2 md:gap-3 lg:gap-4">
-                <Image src = {cIcon} alt = "cIcon" />
-                <Image src = {javaIcon} alt = "javaIcon" />
-                <Image src = {pythonIcon} alt = "pythonIcon" />
-                <Image src = {htmlIcon} alt = "htmlIcon" />
-                <Image src = {cssIcon} alt = "cssIcon" />
-                <Image src = {javascriptIcon} alt = "javascriptIcon" />
-                <Image src = {phpIcon} alt = "phpIcon" />
-                <Image src = {sqlIcon} alt = "sqlIcon" />
-                <Image src = {reactIcon} alt = "reactIcon" />
-                <Image src = {nodejsIcon} alt = "nodejsIcon" />
-                <Image src = {nextjsIcon} alt = "nextjsIcon" />
-                <Image src = {tailwindIcon} alt = "tailwindIcon" />
-                <Image src = {gitIcon} alt = "gitIcon" />
-                <Image src = {firebaseIcon} alt = "firebaseIcon" />
-                <Image src = {vercelIcon} alt = "vercelIcon" />
-                <Image src = {mysqlIcon} alt = "mysqlIcon" />
-                <Image src = {postmanlIcon} alt = "postmanlIcon" />
+                <AnimatePresence>
+                    {[
+                        { src: cIcon, alt: "cIcon" },
+                        { src: javaIcon, alt: "javaIcon" },
+                        { src: pythonIcon, alt: "pythonIcon" },
+                        { src: htmlIcon, alt: "htmlIcon" },
+                        { src: cssIcon, alt: "cssIcon" },
+                        { src: javascriptIcon, alt: "javascriptIcon" },
+                        { src: phpIcon, alt: "phpIcon" },
+                        { src: sqlIcon, alt: "sqlIcon" },
+                        { src: reactIcon, alt: "reactIcon" },
+                        { src: nodejsIcon, alt: "nodejsIcon" },
+                        { src: nextjsIcon, alt: "nextjsIcon" },
+                        { src: tailwindIcon, alt: "tailwindIcon" },
+                        { src: gitIcon, alt: "gitIcon" },
+                        { src: firebaseIcon, alt: "firebaseIcon" },
+                        { src: vercelIcon, alt: "vercelIcon" },
+                        { src: mysqlIcon, alt: "mysqlIcon" },
+                        { src: postmanlIcon, alt: "postmanlIcon" }
+                    ].map((icon, index) => (
+                        <motion.div
+                            key={icon.alt}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -50 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                        >
+                            <Image src={icon.src} alt={icon.alt} />
+                        </motion.div>
+                    ))}
+                </AnimatePresence>
             </div>
         ),
     },
@@ -70,39 +83,59 @@ const TAB_DATA = [
 
 const AboutSection = () => {
     const [tab, setTab] = useState("skills");
-    const [isPending, startTransition] = useTransition();
+    const [inView, setInView] = useState(false);
+    const aboutRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setInView(entry.isIntersecting);
+            },
+            {
+                threshold: 0.5 // Adjust as needed
+            }
+        );
+
+        if (aboutRef.current) {
+            observer.observe(aboutRef.current);
+        }
+
+        return () => {
+            if (aboutRef.current) {
+                observer.unobserve(aboutRef.current);
+            }
+        };
+    }, []);
 
     const handleTabChange = (id) => {
-        startTransition(() => {
-            setTab(id);
-        });
-    } 
+        setTab(id);
+    };
 
     return (
-        <section id="about" className = "text-white">
-            <div className = "md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 sl:gap-16 xl:px-16">
+        <section id="about" className="text-white" ref={aboutRef}>
+            <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 sl:gap-16 xl:px-16">
                 <Image src="/images/setup.jpg" alt="Setup" width={500} height={500} />
-                <div className = "mt-4 md:mt-0 text-left flex flex-col h-full">
-                    <h2 className = "text-4xl font-bold text-white mb-4">
-                        About Me
-                    </h2>
-                    <p className = "text-base lg:text-lg">
-                        Description
-                    </p>
-                    <div className = "flex flex-row justify-start mt-8">
+                <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+                    <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+                    <p className="text-base lg:text-lg">Description</p>
+                    <div className="flex flex-row justify-start mt-8">
                         {TAB_DATA.map((tabItem) => (
                             <TabButton key={tabItem.id} selectTab={() => handleTabChange(tabItem.id)} active={tab === tabItem.id}>
                                 {tabItem.title}
                             </TabButton>
                         ))}
                     </div>
-                    <div className = "mt-8">
-                        {TAB_DATA.find((t) => t.id === tab).content}
+                    <div className="mt-8">
+                        {inView && (
+                            <AnimatePresence>
+                                {TAB_DATA.find((t) => t.id === tab).content}
+                            </AnimatePresence>
+                        )}
                     </div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default AboutSection
+export default AboutSection;
