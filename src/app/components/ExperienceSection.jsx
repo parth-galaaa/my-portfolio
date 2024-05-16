@@ -48,8 +48,8 @@ const ExperienceSection = () => {
 
     return (
         <section id="experiences" className="text-white mt-2">
-            <h2 className="text-4xl lg:text-6xl font-bold text-white text-left mb-8 mt-4">Work Experience</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <h2 className="text-4xl lg:text-6xl font-bold text-white text-left mb-8 mt-12">Work Experience</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-4">
                 {workExperiences.map((experience) => (
                     <div key={experience.id} className="rounded-lg overflow-hidden shadow-lg bg-gray-800 h-full">
                         <div className="px-6 py-4 h-full flex flex-col justify-between">

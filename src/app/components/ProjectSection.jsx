@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState, useRef} from 'react'
+import React, { useState, useRef } from 'react'
 import ProjectCard from './ProjectCard';
 import ProjectTag from './ProjectTag';
 import { animate, motion, useInView } from 'framer-motion';
@@ -38,7 +38,7 @@ const projectsData = [
         title: "Four in a Row",
         description: "Let's see who makes a 4 first..",
         image: "/images/fourinarow.webp",
-        tag: ["All","CLI"],
+        tag: ["All", "CLI"],
         gitUrl: "https://github.com/parth-galaaa/four-in-a-row.git",
         previewUrl: "/",
     },
@@ -62,42 +62,40 @@ const ProjectSection = () => {
         setTag(newTag);
     };
 
-    const filteredProjects = projectsData.filter((project) => 
+    const filteredProjects = projectsData.filter((project) =>
         project.tag.includes(tag)
     );
 
     const cardVariants = {
-        initial: {y: 50, opacity: 0},
-        animate: {y: 0, opacity: 1},
+        initial: { y: 50, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
     };
 
-  return (
-    <section ref={ref} id="project">
-        <h2 className = "text-center text-4xl font-bold text-white mt-4">
-            My Projects
-        </h2>
-        <div className = "text-white flex flex-row justify-center items-center gap-2 py-6">
-            <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
-            <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
-            <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
-            <ProjectTag onClick={handleTagChange} name="CLI" isSelected={tag === "CLI"} />
-        </div>
-        <ul ref={ref} className = "grid md:grid-cols-3 gap-8 and md:gap-12">
-            {
-                filteredProjects.map((project) => (
-                    <motion.li key = {project.id} variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"} transition={{ duration:0.3, delay: project.id * 0.4}}>
-                        <ProjectCard  
-                        title = {project.title} 
-                        description = {project.description} 
-                        imgUrl = {project.image} 
-                        gitUrl={project.gitUrl} 
-                        previewUrl={project.previewUrl} 
-                        />
-                    </motion.li>
-            ))}
-        </ul>
-    </section>
-  )
+    return (
+        <section ref={ref} id="project">
+            <h2 className="text-4xl lg:text-6xl font-bold text-white text-center mt-12">Projects</h2>
+            <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+                <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
+                <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
+                <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
+                <ProjectTag onClick={handleTagChange} name="CLI" isSelected={tag === "CLI"} />
+            </div>
+            <ul ref={ref} className="grid md:grid-cols-3 gap-8 and md:gap-12">
+                {
+                    filteredProjects.map((project) => (
+                        <motion.li key={project.id} variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"} transition={{ duration: 0.3, delay: project.id * 0.4 }}>
+                            <ProjectCard
+                                title={project.title}
+                                description={project.description}
+                                imgUrl={project.image}
+                                gitUrl={project.gitUrl}
+                                previewUrl={project.previewUrl}
+                            />
+                        </motion.li>
+                    ))}
+            </ul>
+        </section>
+    )
 }
 
 export default ProjectSection
