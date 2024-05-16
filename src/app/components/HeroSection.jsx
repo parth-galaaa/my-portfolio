@@ -27,8 +27,8 @@ const HeroSection = () => {
 
     const handleDownloadCV = () => {
         const a = document.createElement('a');
-        a.href = './test.pdf';
-        a.download = 'test.pdf';
+        a.href = './ParthGala_Resume.pdf';
+        a.download = 'ParthGala_Resume.pdf';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
