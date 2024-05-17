@@ -124,7 +124,7 @@ const AboutSection = () => {
                     />
                 </div>
                 <div className="text-left">
-                    <p className="text-lg mb-6">Hey there, I'm passionate about turning lines of code into meaningful solutions. From late-night debugging sessions to the thrill of seeing my projects come to life, I'm all about the journey.</p>
+                    <p className="text-lg mb-6">Hey there, I&apos;m passionate about turning lines of code into meaningful solutions. From late-night debugging sessions to the thrill of seeing my projects come to life, I&apos;m all about the journey.</p>
                     <div className="flex flex-row justify-start space-x-4 mb-8">
                         {TAB_DATA.map((tabItem) => (
                             <TabButton key={tabItem.id} selectTab={() => handleTabChange(tabItem.id)} active={tab === tabItem.id}>
