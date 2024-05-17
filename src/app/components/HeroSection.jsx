@@ -66,11 +66,11 @@ const HeroSection = () => {
                             Welcome to my online space, where you&apos;ll discover a fusion of my skills, experiences, and creativity, offering insight into who I am...
                         </p>
                         <div>
-                            <button className="px-1 py-1 w-full sm:w-fit rounded-full mr-3 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3 ">
+                            <button className="px-1 py-1 sm:w-fit rounded-full mr-3 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3 ">
                                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2" onClick={handleDownloadCV}>Download CV</span>
                             </button>
                             <Link href="#about">
-                                <button className="px-6 py-3 w-full sm:w-fit rounded-full hover:bf-slate-200 text-white">Learn More
+                                <button className="px-6 py-3 sm:w-fit rounded-full hover:bf-slate-200 text-white">Learn More
                                     <ChevronRightIcon className="text-white" />
                                 </button>
                             </Link>

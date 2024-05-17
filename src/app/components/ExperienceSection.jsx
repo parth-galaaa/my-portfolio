@@ -47,16 +47,16 @@ const ExperienceSection = () => {
     ];
 
     return (
-        <section id="experiences" className="text-white mt-2">
+        <section id="experiences" className="text-white mt-2 sm:mb-16 md:mb-28 lg:mb-32">
             <h2 className="text-4xl lg:text-6xl font-bold text-white text-left mb-8 mt-12">Work Experience</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-4">
                 {workExperiences.map((experience) => (
-                    <div key={experience.id} className="rounded-lg overflow-hidden shadow-lg h-full" style={{background: 'linear-gradient(135deg, #12100E, #2c3e50)'}}>
+                    <div key={experience.id} className="rounded-lg overflow-hidden shadow-lg h-full" style={{ background: 'linear-gradient(135deg, #12100E, #2c3e50)' }}>
                         <div className="px-6 py-4 h-full flex flex-col justify-between">
                             <div>
                                 <div className="font-bold text-xl mb-2 text-white">{experience.companyName}</div>
                                 <p className="text-gray-200 text-base mb-2">{experience.position}</p>
-                                <ul className="list-disc list-inside overflow-auto max-h-36">
+                                <ul className="list-disc list-inside overflow-auto max-h-36" style={{ textAlign: 'justify' }}>
                                     {experience.duties.map((duty, index) => (
                                         <li key={index} className="text-gray-300 text-sm mb-1">{duty}</li>
                                     ))}
