@@ -12,8 +12,7 @@ const projectsData = [
         description: "Welcome to my WEBSITE!",
         image: "/images/portfolio.jpg",
         tag: ["All", "Web"],
-        gitUrl: "https://github.com/parth-galaaa/ExpenseTracker.git",
-        previewUrl: "/",
+        gitUrl: "https://github.com/parth-galaaa/my-portfolio.git",
     },
     {
         id: 2,
@@ -22,7 +21,6 @@ const projectsData = [
         image: "/images/expenseTracker1.jpg",
         tag: ["All", "Mobile"],
         gitUrl: "https://github.com/parth-galaaa/ExpenseTracker.git",
-        previewUrl: "/",
     },
     {
         id: 3,
@@ -31,7 +29,6 @@ const projectsData = [
         image: "/images/ecommerce.jpg",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/parth-galaaa/ExpenseTracker.git",
-        previewUrl: "/",
     },
     {
         id: 4,
@@ -40,7 +37,6 @@ const projectsData = [
         image: "/images/fourinarow.webp",
         tag: ["All", "CLI"],
         gitUrl: "https://github.com/parth-galaaa/four-in-a-row.git",
-        previewUrl: "/",
     },
     {
         id: 5,
@@ -49,7 +45,6 @@ const projectsData = [
         image: "/images/calculator.jpg",
         tag: ["All", "CLI"],
         gitUrl: "https://github.com/parth-galaaa/simple-calculator.git",
-        previewUrl: "/",
     },
 ];
 
@@ -89,7 +84,6 @@ const ProjectSection = () => {
                                 description={project.description}
                                 imgUrl={project.image}
                                 gitUrl={project.gitUrl}
-                                previewUrl={project.previewUrl}
                             />
                         </motion.li>
                     ))}
