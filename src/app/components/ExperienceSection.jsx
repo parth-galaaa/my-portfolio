@@ -5,21 +5,22 @@ const ExperienceSection = () => {
         {
             id: 1,
             companyName: "Ground Effects Ltd",
-            position: "IT Co-op",
-            duties: ["Developed and implemented cloud flows to effortlessly transfer attachments from Outlook to the SharePoint server, leading to a 60% reduction in manual effort",
-                "Optimized database performance by creating and altering complex SQL queries and stored procedures, resulting in faster query execution time and better overall system efficiency",
-                "Integrated with the PHP codebase to meet several task requirements, contributing to seamless and efficient results, such as automatic import of data from external files into database tables, thereby saving hours of manual data import",
-                "Utilized Report Builder to develop comprehensive reports, facilitating data-driven decision-making",
-                " Designed and modified React components, using JavaScript for building interactive web experiences to display real time data retrieved from database tables"],
+            position: "Software Developer Co-op",
+            duties: ["Integrating with the PHP codebase to develop solutions addressing diverse task requirements",
+                "Proficiently using SQL to extract and manipulate data using complex queries and stored procedures, supporting seamless database operations and facilitating informed decision-making",
+                "Developing React components and websites, using JavaScript for building interactive web experiences to display real time data retrieved from database tables",
+                "Utilizing Report Builder to develop comprehensive reports, facilitating data-driven decision-making",
+                "Designing and deploying cloud-based workflows to automate routine tasks, improving operational efficiency and reducing manual effort"],
             duration: "Sept 2023 - Present",
         },
         {
             id: 2,
             companyName: "Malad Gas Service, BPCL",
-            position: "Data Analyst and Sales Associatree",
+            position: "Data Analyst Intern",
             duties: [
                 "Analyzing and processing data using SQL to create and test new functionalities along with integrating databases to generate reports to keep track of monthly statistics",
-                "Leading a team of 4-5 members to collaborate on sales, and provide high-quality customer-service enhancing team performance and productivity"
+                "Designing and executing data visualizations to effectively communicate data insights by engaging with interactive dashboards",
+                "Collaborating with a team of 4-5 members to drive sales, and provide high-quality customer-service enhancing team performance and productivity"
             ],
             duration: "Jun 2022 - Present",
         },
