@@ -5,7 +5,6 @@ import ProjectSection from "./components/ProjectSection";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import ExperienceSection from "./components/ExperienceSection";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (
