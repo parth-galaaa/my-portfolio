@@ -6,44 +6,34 @@ const ExperienceSection = () => {
             id: 1,
             companyName: "Ground Effects Ltd",
             position: "Software Developer Co-op",
-            duties: ["Integrating with the PHP codebase to develop solutions addressing diverse task requirements",
-                "Proficiently using SQL to extract and manipulate data using complex queries and stored procedures, supporting seamless database operations and facilitating informed decision-making",
-                "Developing React components and websites, using JavaScript for building interactive web experiences to display real time data retrieved from database tables",
-                "Utilizing Report Builder to develop comprehensive reports, facilitating data-driven decision-making",
-                "Designing and deploying cloud-based workflows to automate routine tasks, improving operational efficiency and reducing manual effort"],
-            duration: "Sept 2023 - Present",
+            duties: ["Integrated with the PHP code base to develop solutions addressing diverse task requirements",
+                "Proficiently used SQL to extract and manipulate data using complex queries and stored procedures, supporting seamless database operations and facilitated informed decision-making",
+                "Developed web applications and interactive pages, using Next.js to display real time data retrieved from database tables",
+                "Analyzed data using Power BI and Report Builder to generate comprehensive reports that inform decision-making",
+                "Designed and deployed cloud-based workflows to automate routine tasks, improving operational efficiency and reducing manual effort by 60%"],
+            duration: "Sept 2023 - Aug 2024",
         },
         {
             id: 2,
             companyName: "Malad Gas Service, BPCL",
             position: "Data Analyst Intern",
             duties: [
-                "Analyzing and processing data using SQL to create and test new functionalities along with integrating databases to generate reports to keep track of monthly statistics",
-                "Designing and executing data visualizations to effectively communicate data insights by engaging with interactive dashboards",
-                "Collaborating with a team of 4-5 members to drive sales, and provide high-quality customer-service enhancing team performance and productivity"
+                "Analyzed and processed data using SQL to create and test new functionalities along with integrating databases to generate reports to track monthly statistics",
+                "Designed data visualizations to effectively communicate data insights by engaging with interactive dashboards",
+                "Collaborated with a team of 4-5 members to drive sales, and provide high-quality customer-service enhancing team performance and productivity"
             ],
-            duration: "Jun 2022 - Present",
+            duration: "Jun 2022 - Jun 2024",
         },
         {
             id: 3,
             companyName: "University of Windsor",
             position: "Teaching Assistant",
             duties: [
-                "Planning and facilitating sessions for 20+ students on topics in Computer Science and providing personalized feedback",
-                "Liaising with professor regarding development opportunities, challenges and assisting with conducting labs for students",
-                "Coordinating with grading and assessment of 15+ student work, including homework, quizzes, and tests"
+                "Planned and facilitated sessions for 20+ students on topics in Computer Science and provided personalized feedback",
+                "Liaised with professor regarding development opportunities, challenges and assisting with conducting labs for students",
+                "Coordinated with grading and assessment of 15+ student work, including homework, quizzes, and tests"
             ],
-            duration: "Jan 2023 - Apr 2024",
-        },
-        {
-            id: 4,
-            companyName: "University of Windsor",
-            position: "Human Resources Assistant",
-            duties: [
-                "Managing student hiring and transfer applications, prioritizing phone and in-person inquiries, resulting in improved administrative efficiency and enhanced communication",
-                "Sorting and filing contracts and documents alphabetically, while maintaining and updating employee records of 10+ departments with VIP software"
-            ],
-            duration: "Oct 2022 - Aug 2023"
+            duration: "Jan 2023 - Dec 2024",
         }
     ];
 
