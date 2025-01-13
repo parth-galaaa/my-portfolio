@@ -20,6 +20,19 @@ import vercelIcon from "../../../public/vercel.svg";
 import mysqlIcon from "../../../public/mysql.svg";
 import postmanlIcon from "../../../public/postman.svg";
 import { AnimatePresence, motion } from 'framer-motion';
+import awsIcon from "../../../public/aws.svg";
+import azureIcon from "../../../public/azure.svg";
+import jupyterIcon from "../../../public/jupyter.svg";
+import TableauIcon from "../../../public/tableau.svg";
+import matplotlibIcon from "../../../public/matplotlib.svg";
+import numpyIcon from "../../../public/numpy.svg";
+import pandasIcon from "../../../public/pandas.svg";
+import scikitIcon from "../../../public/scikitlearn.svg";
+import tensorflowIcon from "../../../public/tensorflow.svg";
+import kerasIcon from "../../../public/keras.svg";
+import pytorchIcon from "../../../public/pytorch.svg";
+import powerautomateIcon from "../../../public/powerautomate.svg";
+import powerbiIcon from "../../../public/powerbi.svg";
 
 const TAB_DATA = [
     {
@@ -45,7 +58,20 @@ const TAB_DATA = [
                         { src: firebaseIcon, alt: "firebaseIcon" },
                         { src: vercelIcon, alt: "vercelIcon" },
                         { src: mysqlIcon, alt: "mysqlIcon" },
-                        { src: postmanlIcon, alt: "postmanlIcon" }
+                        { src: postmanlIcon, alt: "postmanlIcon" },
+                        { src: awsIcon, alt: "awsIcon" },
+                        { src: azureIcon, alt: "azureIcon" },
+                        { src: jupyterIcon, alt: "jupyterIcon" },
+                        { src: TableauIcon, alt: "TableauIcon" },
+                        { src: matplotlibIcon, alt: "matplotlibIcon" },
+                        { src: numpyIcon, alt: "numpyIcon" },
+                        { src: pandasIcon, alt: "pandasIcon" },
+                        { src: scikitIcon, alt: "scikitIcon" },
+                        { src: tensorflowIcon, alt: "tensorflowIcon" },
+                        { src: kerasIcon, alt: "kerasIcon" },
+                        { src: pytorchIcon, alt: "pytorchIcon" },
+                        { src: powerautomateIcon, alt: "powerautomateIcon" },
+                        { src: powerbiIcon, alt: "powerbiIcon" },
                     ].map((icon, index) => (
                         <motion.div
                             key={icon.alt}
