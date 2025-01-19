@@ -95,7 +95,7 @@ const TAB_DATA = [
                     <div className="w-full md:w-auto md:flex-grow">
                         <h3 className="font-bold text-lg mb-2">University of Windsor</h3>
                         <p className="text-sm">Bachelor of Computer Science Honours (Co-op)</p>
-                        <p className="text-xs text-gray-300 mb-1">Minor in Mathematics along with a Specialization in AI</p>
+                        <p className="text-xs text-gray-300 mb-1">Specialization in AI along with a Minor in Mathematics</p>
                     </div>
                     <div className="text-right">
                         <p className="text-sm">Fall 2021 - Present</p>
