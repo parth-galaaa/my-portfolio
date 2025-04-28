@@ -6,11 +6,10 @@ const ExperienceSection = () => {
             id: 1,
             companyName: "Ground Effects Ltd",
             position: "Software Developer Co-op",
-            duties: ["Designed and implemented optimized PHP code to address diverse project requirements, including database integration, back-end processing, and user interface functionality",
-                "Leveraged complex SQL queries and stored procedures to ensure seamless data extraction and database operations",
-                "Developed web applications and interactive pages, using Next.js to display real time data retrieved from database",
-                "Analyzed data with visualization tools to produce actionable reports, driving data-driven decisions",
-                "Deployed cloud-based workflows to automate routine tasks, improving operational efficiency and reducing manual effort by almost 80%"],
+            duties: ["Designed and optimized web applications using PHP and JavaScript to address diverse project requirements, including database integration, back-end processing, responsive user interface",
+                "Developed and maintained data pipelines supporting 3+ cross-functional teams, by leveraging complex SQL queries and stored procedures for efficient data extraction and transformation",
+                "Analyzed data using different visualization tools to generate actionable reports, driving data-driven decisions",
+                "Automated workflows using Azure and AWS cloud solutions to perform routine tasks, reducing manual effort byalmost 80%"],
             duration: "Sept 2023 - Aug 2024",
         },
         {
@@ -18,19 +17,19 @@ const ExperienceSection = () => {
             companyName: "Malad Gas Service, BPCL",
             position: "Data Analyst",
             duties: [
-                "Optimizing monthly statistics reporting by analyzing large datasets and integrating databases using SQL, improving accuracy by 40% and delivering valuable insights",
-                "Designing interactive visualizations that simplified data insights, boosting stakeholder engagement and improving strategic business outcomes",
-                "Collaborating with a team of 4-5 members to drive sales, and provide high-quality customer-service enhancing team performance and productivity"
+                "Optimized monthly statistics reporting by analyzing large datasets and integrating databases using SQL, improving accuracy by 60% and delivering valuable insights",
+                "Created interactive visualizations that simplified data insights, boosting stakeholder engagement and improving strategic business outcomes by 40%",
+                "Collaborated with a team of 4-5 members to drive sales, and provide high-quality customer-service enhancing team performance and productivit"
             ],
-            duration: "Jun 2023 - Present",
+            duration: "May 2022 - Aug 2023",
         },
         {
             id: 3,
             companyName: "University of Windsor",
             position: "Teaching Assistant",
             duties: [
-                "Planned and facilitated labs for 30+ students on topics in Computer Science and provided personalized feedback",
-                "Liaised with professor regarding development opportunities, challenges and assisting with conducting labs for students",
+                "Planned and facilitated labs for 30+ students for courses in Computer Science and provided personalized feedback",
+                "Liaised with professor regarding development opportunities, challenges and assisting with lectures for students",
                 "Coordinated with grading and assessment of 25+ student work, including assignments, quizzes, and tests"
             ],
             duration: "Jan 2023 - Dec 2024",
