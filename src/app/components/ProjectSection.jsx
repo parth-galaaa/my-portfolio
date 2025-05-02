@@ -3,11 +3,27 @@
 import React, { useState, useRef } from 'react'
 import ProjectCard from './ProjectCard';
 import ProjectTag from './ProjectTag';
-import { animate, motion, useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 const projectsData = [
     {
         id: 1,
+        title: "Text Analyzer",
+        description: "AI-powered tool to perform summary, paraphrasing, sentiment analysis and translation",
+        image: "/images/text.png",
+        tag: ["All", "Web"],
+        gitUrl: "https://github.com/parth-galaaa/text-analyzer",
+    },
+    {
+        id: 2,
+        title: "Sentiment-Analysis-on-Amazon-Reviews",
+        description: "What emotions do these reviews convey?",
+        image: "/images/sentiment.png",
+        tag: ["All", "CLI"],
+        gitUrl: "https://github.com/parth-galaaa/Sentiment-Analysis-on-Amazon-Reviews",
+    },
+    {
+        id: 3,
         title: "Real-Time Market Data Forecasting",
         description: "Market Data Forecasting using Machine Learning",
         image: "/images/stockprediction.png",
@@ -15,7 +31,7 @@ const projectsData = [
         gitUrl: "https://github.com/parth-galaaa/Machine-Learning-Project",
     },
     {
-        id: 2,
+        id: 4,
         title: "Personal Portfolio Website",
         description: "Welcome to my WEBSITE!",
         image: "/images/portfolio.jpg",
@@ -23,7 +39,7 @@ const projectsData = [
         gitUrl: "https://github.com/parth-galaaa/my-portfolio",
     },
     {
-        id: 3,
+        id: 5,
         title: "Expense Tracker App",
         description: "Want to keep your expenses in check?",
         image: "/images/expenseTracker1.jpg",
@@ -31,15 +47,15 @@ const projectsData = [
         gitUrl: "https://github.com/parth-galaaa/ExpenseTracker",
     },
     {
-        id: 4,
+        id: 6,
         title: "Ecommerce Website",
         description: "Thinking about elevating your everyday shopping experience?",
         image: "/images/ecommerce.jpg",
         tag: ["All", "Web"],
-        gitUrl: "https://github.com/parth-galaaa/ExpenseTracker",
+        gitUrl: "https://github.com/parth-galaaa/Ecommerce-Website",
     },
     {
-        id: 5,
+        id: 7,
         title: "Four in a Row",
         description: "Let's see who makes a 4 first..",
         image: "/images/fourinarow.webp",
@@ -47,7 +63,7 @@ const projectsData = [
         gitUrl: "https://github.com/parth-galaaa/four-in-a-row",
     },
     {
-        id: 6,
+        id: 8,
         title: "Calculator",
         description: "Trouble with calculations?",
         image: "/images/calculator.jpg",
