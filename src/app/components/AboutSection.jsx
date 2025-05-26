@@ -148,7 +148,7 @@ const AboutSection = () => {
                         </TabButton>
                     ))}
                 </div>
-                <div className="mt-8">
+                <div className="text-left mt-8">
                     {inView && (
                         <AnimatePresence>
                             <motion.div
