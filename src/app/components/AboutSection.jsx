@@ -138,7 +138,7 @@ const AboutSection = () => {
 
     return (
         <section id="about" className="text-white sm:mb-16 md:mb-28 lg:mb-32" ref={aboutRef}>
-            <div className="text-left">
+            <div className="text-right">
                 <h2 className="text-4xl lg:text-6xl font-bold text-white mb-4 md:mb-8">About Me</h2>
                 <p className="text-lg mb-6">Hey there, I&apos;m passionate about turning lines of code into meaningful solutions. From late-night debugging sessions to the thrill of seeing my projects come to life, I&apos;m all about the journey.</p>
                 <div className="flex flex-row justify-start space-x-4 mb-8">
