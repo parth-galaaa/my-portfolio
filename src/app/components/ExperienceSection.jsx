@@ -7,9 +7,9 @@ const ExperienceSection = () => {
             companyName: "Ground Effects Ltd",
             position: "Full Stack Software Developer Co-op ",
             location: "Windsor, ON",
-            duties: ["Designed and optimized web applications using PHP, TypeScript and JavaScript to address diverse project requirements, including database integration, back-end processing, responsive user interface",
+            duties: ["Designed and optimized full-stack web applications using TypeScript and JavaScript across both client and server sides, leveraging Next.js and Node.js, as well as PHP-based backend systems",
                 "Developed and maintained data pipelines supporting 3+ cross-functional teams, by leveraging complex SQL queries and stored procedures for efficient data extraction and transformation",
-                "Implemented high-performance, scalable RESTful APIs and backend services that enhanced system performance and decreased response times by 25%.",
+                "Implemented high-performance, scalable RESTful APIs that enhanced system performance and decreased response times by 25%",
                 "Automated workflows using Azure and AWS cloud solutions to perform routine tasks, reducing manual effort by almost 80%"],
             duration: "Sept 2023 - Aug 2024",
         },
@@ -19,9 +19,9 @@ const ExperienceSection = () => {
             position: "Data Science Intern",
             location: "Mumbai, Maharashtra, India",
             duties: [
-                "Applied machine learning techniques to analyze customer data and forecast service demands, enabling the team to implement targeted strategies that improved sales and customer service efficiency by over 30%.",
-                "Streamlined monthly reporting by analyzing large datasets and integrating databases with SQL, increasing data accuracy by 60%.",
-                "Created interactive visualizations that simplified data insights, boosting stakeholder engagement and improving strategic business outcomes by 40%"
+                "Applied machine learning techniques to analyze customer data and forecast service demands, enabling the team to implement targeted strategies that improved sales and customer service efficiency by over 30%",
+                "Performed exploratory data analysis (EDA) on over 500,000 records from disparate sources, uncovering consumption trends and reducing data preprocessing time by 45% through automated cleaning scripts",
+                "Developed interactive dashboards in Tableau and documented data workflows to monitor key metrics, reducing data errors by 25% through timely anomaly detection and alerts"
             ],
             duration: "May 2022 - Aug 2023",
         },
