@@ -18,7 +18,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
                 />
 
                 {/* Overlay */}
-                <div className="overlay absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex items-center justify-center bg-opacity-80 transition-opacity duration-500">
+                <div className="overlay absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex items-center justify-center hover:bg-opacity-80 transition-opacity duration-500">
                     <Link href={gitUrl} target="_blank" rel="noopener noreferrer" className="h-14 w-14 mr-2 border-2 rounded-full border-[#ADB7BE] hover:border-white flex items-center justify-center">
                         <CodeBracketIcon className="h-10 w-10 text-[#ADB7BE] group-hover:text-white" />
                     </Link>

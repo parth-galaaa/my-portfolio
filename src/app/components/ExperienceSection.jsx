@@ -5,12 +5,14 @@ const ExperienceSection = () => {
         {
             id: 1,
             companyName: "Ground Effects Ltd",
-            position: "Full Stack Software Developer Co-op ",
+            position: "Full Stack Software Developer Co-op",
             location: "Windsor, ON",
-            duties: ["Developed and optimized web applications using TypeScript and JavaScript with Node.js backends, as well as applications with PHP-based server-side architectures",
+            duties: [
+                "Developed and optimized web applications using TypeScript and JavaScript with Node.js backends, as well as applications with PHP-based server-side architectures",
                 "Developed and maintained data pipelines supporting 3+ cross-functional teams, by leveraging complex SQL queries and stored procedures for efficient data extraction and transformation",
                 "Implemented high-performance, scalable RESTful APIs that enhanced system performance and decreased response times by 25%",
-                "Automated workflows using Azure and AWS cloud solutions to perform routine tasks, reducing manual effort by almost 80%"],
+                "Automated workflows using Azure and AWS cloud solutions to perform routine tasks, reducing manual effort by almost 80%"
+            ],
             duration: "Sept 2023 - Aug 2024",
         },
         {
@@ -44,7 +46,11 @@ const ExperienceSection = () => {
             <h2 className="text-4xl lg:text-6xl font-bold text-white text-left mb-8 mt-12">Work Experience</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-4">
                 {workExperiences.map((experience) => (
-                    <div key={experience.id} className="rounded-lg overflow-hidden shadow-lg h-full" style={{ background: 'linear-gradient(135deg, #12100E, #2c3e50)' }}>
+                    <div
+                        key={experience.id}
+                        className="rounded-lg overflow-hidden shadow-lg h-full"
+                        style={{ background: 'linear-gradient(135deg, #12100E, #2c3e50)' }}
+                    >
                         <div className="px-6 py-4 h-full flex flex-col justify-between">
                             <div>
                                 <div className="font-bold text-xl text-white">{experience.position}</div>
@@ -52,7 +58,7 @@ const ExperienceSection = () => {
                                     <p className="text-gray-200 text-base mb-2">{experience.companyName}</p>
                                     <p className="text-gray-400 text-base mb-2 ml-auto">{experience.location}</p>
                                 </div>
-                                <ul className="list-disc list-inside overflow-auto max-h-36" style={{ textAlign: 'justify' }}>
+                                <ul className="list-disc list-inside overflow-y-scroll h-36" style={{ textAlign: 'justify' }}>
                                     {experience.duties.map((duty, index) => (
                                         <li key={index} className="text-gray-300 text-sm mb-1">{duty}</li>
                                     ))}
