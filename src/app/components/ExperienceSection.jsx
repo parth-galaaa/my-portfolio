@@ -7,7 +7,7 @@ const ExperienceSection = () => {
             companyName: "Ground Effects Ltd",
             position: "Full Stack Software Developer Co-op ",
             location: "Windsor, ON",
-            duties: ["Designed and optimized full-stack web applications using TypeScript and JavaScript across both client and server sides, leveraging Next.js and Node.js, as well as PHP-based backend systems",
+            duties: ["Developed and optimized web applications using TypeScript and JavaScript with Node.js backends, as well as applications with PHP-based server-side architectures",
                 "Developed and maintained data pipelines supporting 3+ cross-functional teams, by leveraging complex SQL queries and stored procedures for efficient data extraction and transformation",
                 "Implemented high-performance, scalable RESTful APIs that enhanced system performance and decreased response times by 25%",
                 "Automated workflows using Azure and AWS cloud solutions to perform routine tasks, reducing manual effort by almost 80%"],
