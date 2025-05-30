@@ -43,7 +43,9 @@ const ExperienceSection = () => {
 
     return (
         <section id="experiences" className="text-white mt-2 sm:mb-16 md:mb-28 lg:mb-32">
-            <h2 className="text-4xl lg:text-6xl font-bold text-white text-left mb-8 mt-12">Work Experience</h2>
+            <h2 className="text-4xl lg:text-6xl font-bold text-white text-left mb-8 mt-12">
+                Work Experience
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-4">
                 {workExperiences.map((experience) => (
                     <div
@@ -58,7 +60,10 @@ const ExperienceSection = () => {
                                     <p className="text-gray-200 text-base mb-2">{experience.companyName}</p>
                                     <p className="text-gray-400 text-base mb-2 ml-auto">{experience.location}</p>
                                 </div>
-                                <ul className="list-disc list-inside overflow-y-scroll h-36" style={{ textAlign: 'justify' }}>
+                                <ul
+                                    className="list-disc list-inside min-h-[9rem] overflow-y-auto scrollbar-gutter-stable"
+                                    style={{ textAlign: 'justify' }}
+                                >
                                     {experience.duties.map((duty, index) => (
                                         <li key={index} className="text-gray-300 text-sm mb-1">{duty}</li>
                                     ))}
